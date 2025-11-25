@@ -12,11 +12,14 @@
 # Crie um programa que imprime na tela o seguinte texto:
 # Olá, meu nome é {nome}! Tenho {idade} anos e {altura} metros!
 
-nome = "Tarik Ponciano"
-idade = 29
-altura = 1.7
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+altura = input("Digite sua altura: ")
 
 print(f"Olá, meu nome é {nome}! Tenho {idade} anos e {altura} metros!")
 
 # Imprima na tela a data de nascimento dessa pessoa com a mensagem a seguir. Considere o ano atual como 2025. Ignore se a pessoa já fez aniversário ou não:
 # "Nasci no ano {ano}!"
+data_de_nascimento = 2025 - idade
+
+print(f"Nasci no ano {data_de_nascimento}!")
