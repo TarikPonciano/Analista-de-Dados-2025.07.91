@@ -13,8 +13,15 @@
 # Olá, meu nome é {nome}! Tenho {idade} anos e {altura} metros!
 
 nome = input("Digite seu nome: ")
-idade = input("Digite sua idade: ")
-altura = input("Digite sua altura: ")
+idade = int(input("Digite sua idade: "))
+altura = float(input("Digite sua altura: "))
+
+#Tipos de Dados Primitivos
+# str #Texto
+# bool #Lógico
+# int #Inteiro
+# float #Decimal
+
 
 print(f"Olá, meu nome é {nome}! Tenho {idade} anos e {altura} metros!")
 
@@ -23,3 +30,4 @@ print(f"Olá, meu nome é {nome}! Tenho {idade} anos e {altura} metros!")
 data_de_nascimento = 2025 - idade
 
 print(f"Nasci no ano {data_de_nascimento}!")
+
