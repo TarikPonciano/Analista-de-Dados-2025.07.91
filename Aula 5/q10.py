@@ -26,7 +26,6 @@ elif nota_desempenho >= 6 and nota_desempenho <= 8:
         bonus = 500
     else:
         bonus = 1000
-    
 else:
     nivel_desempenho = "Alto"
     if anos_empresa < 2:
