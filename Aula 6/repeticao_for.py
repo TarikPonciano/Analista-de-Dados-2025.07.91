@@ -35,3 +35,11 @@
 # print(f"Resultado de 0 a {numero}: {soma}")
 
 # Faça um programa que pede dez números ao usuário e imprime a soma desses números
+
+# soma = 0
+
+# for i in range(3):
+#     numero = int(input("Digite um número: "))
+#     soma += numero
+
+# print(f"A soma dos números foi: {soma}")
