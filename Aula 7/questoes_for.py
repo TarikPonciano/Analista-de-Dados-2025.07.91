@@ -8,5 +8,5 @@
 # >= 7 - Aprovado
 # >= 4 and < 7 - Recuperação
 # < 4 - Reprovado
-# Bônus: Peça ao usuário quantas notas ele deseja digitar. Utilize no cálculo de média somente notas válidas (0 a 10)
+# Bônus: Peça ao usuário quantas notas ele deseja digitar. Utilize no cálculo de média somente notas válidas (0 a 10). Ao final exiba o boletim do aluno.
 
