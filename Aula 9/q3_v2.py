@@ -7,19 +7,48 @@
 #Missão 3: Faça com que o número secreto seja aleatório e o número mude sempre que for iniciado um novo jogo
 
 #Missão 4: Ao final do jogo, pergunte se o jogador deseja jogar novamente e reinicie o jogo
-
-numero_secreto = 42
-tentativas = 0
+import random
 
 while True:
-    
-    palpite = int(input("Digite um número de 0 a 100:"))
-    tentativas += 1
+    numero_secreto = random.randint(0,100)
+    tentativas = 0
 
-    if palpite == numero_secreto:
+    while True:
+        
+        print(f"Você tem {3-tentativas} tentativas!")
+
+        palpite = int(input("Digite um número de 0 a 100:"))
+        tentativas += 1
+
+        if palpite == numero_secreto:
+            print(f"Você venceu! O número secreto era {numero_secreto}. Você usou {tentativas} {"tentativa" if tentativas == 1 else "tentativas"}!")
+            break
+        else:
+            print("Você errou!")
+
+            if palpite < numero_secreto:
+                print("O número secreto é maior!")
+            else:
+                print("O número secreto é menor!")
+
+            if tentativas >= 3:
+                print("Você chegou ao fim de suas tentativas!")
+                break
+        
+
+    print("Fim de Jogo!")
+    print(f"O número era: {numero_secreto}")
+
+    continuar = input("Deseja continuar? (s/n)")
+
+    if continuar != "s":
         break
-    else:
-        print("Você errou!")
+    
+    # while continuar != "s" and continuar != "n":
 
+    #     continuar = input("Digite uma opção válida. Deseja continuar? (s/n)")
 
-print(f"Você venceu! O número secreto era {numero_secreto}. Você usou {tentativas} {"tentativa" if tentativas == 1 else "tentativas"}!")
+    # if continuar == "n":
+    #     break
+    # else:
+    #     continue
