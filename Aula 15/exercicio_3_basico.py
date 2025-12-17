@@ -13,22 +13,33 @@ while True:
 
 print("Lista de Temperaturas:")
 
+
+# Lógica própria para obter as medidas de maior, menor e média de temperatura
+# contador = 0
+# maior_temperatura = temperaturas[0]
+# menor_temperatura = temperaturas[0]
+# soma_temperaturas = 0
+
+# for t in temperaturas:
+#     print(f"{contador+1}. {t:.1f}°C ")
+#     soma_temperaturas += t
+
+#     if t > maior_temperatura:
+#         maior_temperatura = t
+#     if t < menor_temperatura:
+#         menor_temperatura = t
+
+#     contador += 1
+
+# Versão simplificada para imprimir temperaturas
 contador = 0
-maior_temperatura = temperaturas[0]
-menor_temperatura = temperaturas[0]
-soma_temperaturas = 0
 
 for t in temperaturas:
     print(f"{contador+1}. {t:.1f}°C ")
-    soma_temperaturas += t
-
-    if t > maior_temperatura:
-        maior_temperatura = t
-    if t < menor_temperatura:
-        menor_temperatura = t
 
     contador += 1
 
+# Sessão de Resumo feita usando funções python
 print("RESUMO Funções:")
 
 print(f'''
@@ -37,10 +48,10 @@ Maior Temperatura: {max(temperaturas)}°C
 Menor Temperatura: {min(temperaturas)}°C
 ''')
 
-
-print("RESUMO Caseiro:")
-print(f'''
-Média: {soma_temperaturas/contador}°C
-Maior Temperatura: {maior_temperatura}°C
-Menor Temperatura: {menor_temperatura}°C
-''')
+# # Utilizando lógica própria
+# print("RESUMO Caseiro:")
+# print(f'''
+# Média: {soma_temperaturas/contador}°C
+# Maior Temperatura: {maior_temperatura}°C
+# Menor Temperatura: {menor_temperatura}°C
+# ''')
