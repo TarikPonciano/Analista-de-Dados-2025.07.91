@@ -14,7 +14,9 @@ print("Lista de Temperaturas:")
 
 contador = 0
 
-for t in sorted(temperaturas, reverse=True):
+temperaturas_ordenadas = sorted(temperaturas, reverse=True)
+
+for t in temperaturas_ordenadas:
     print(f"{contador+1}. {t:.1f}°C ")
     contador += 1
 
