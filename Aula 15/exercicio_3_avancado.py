@@ -1,0 +1,1 @@
+# 3. (AVANÇADO) Ao exibir as temperaturas ordene-as de forma decrescente (maior para menor). Além disso modifique o programa para pedir 12 temperaturas, cada uma referente a um mês de 2025, ao final inclua nas informações de Maior Temperatura e Menor Temperatura o nome do mês correspondente.
