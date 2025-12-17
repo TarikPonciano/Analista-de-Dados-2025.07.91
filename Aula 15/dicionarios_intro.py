@@ -1,5 +1,6 @@
 # pessoa_lista = ["João", 23, 1.7]
 dicionario_vazio = {}
+
 pessoa_dicionario = {
     "nome": "João",
     "idade": 23,
