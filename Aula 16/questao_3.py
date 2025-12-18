@@ -1,0 +1,1 @@
+# 3. Faça o cadastro de um cliente, peça as informações nome, cpf, idade, gênero e altura e armazene em um dicionário. Ao final imprima as informações de forma fichada.
