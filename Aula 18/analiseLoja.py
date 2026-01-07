@@ -27,7 +27,13 @@ media_geral = total_geral/len(lista_vendas)
 print(f"Total das vendas: R$ {total_geral:.2f}")
 print(f"Ticket Médio: R$ {media_geral}")
 print(f"Quantidade de Vendas: {len(lista_vendas)}")
-#Exibir total de unidade vendidas
+#Exibir total de unidades vendidas
+#Maior e Menor Venda
+
+#Exibir o nome dos Vendedores
+
+#Exibir o nome das Regiões
+
 
 # 2. Total das vendas por categoria
 # 3. Total das vendas por vendedor
