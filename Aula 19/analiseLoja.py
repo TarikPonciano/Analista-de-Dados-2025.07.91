@@ -67,6 +67,19 @@ for vendedor in lista_vendedores:
 print(f"Quantidade de Vendedores: {len(lista_vendedores)}")
 #Exibir o nome das Regiões e a quantidade de regiões
 print("-------------------------------------------")
+lista_regioes = []
+print("Lista de Regiões:")
+for venda in lista_vendas:
+    if venda["regiao"] not in lista_regioes:
+        lista_regioes.append(venda["regiao"])
+
+lista_regioes.sort()
+
+for contador, regiao in enumerate(lista_regioes):
+    print(f"{contador+1}. {regiao}")
+    
+
+print(f"Quantidade de Regiões: {len(lista_regioes)}")
 
 #Exibir a quantidade de vendas que superou a meta de venda de 3000 reais
 
