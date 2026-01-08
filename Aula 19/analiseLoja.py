@@ -52,11 +52,23 @@ for venda in lista_vendas:
 print(f"Maior Valor de Venda: R$ {maior_venda}")
 print(f"Menor Valor de Venda: R$ {menor_venda}")
 
-#Exibir a quantidade de vendas que superou a meta de venda de 5000 reais
+#Exibir o nome dos Vendedores e a quantidade de vendedores
+print("-------------------------------------------")
+lista_vendedores = []
+print("Lista de Vendedores:")
+for venda in lista_vendas:
+    if venda["vendedor"] not in lista_vendedores:
+        lista_vendedores.append(venda["vendedor"])
 
-#Exibir o nome dos Vendedores
+lista_vendedores.sort()
+for vendedor in lista_vendedores:
+    print(vendedor)
 
-#Exibir o nome das Regiões
+print(f"Quantidade de Vendedores: {len(lista_vendedores)}")
+#Exibir o nome das Regiões e a quantidade de regiões
+print("-------------------------------------------")
+
+#Exibir a quantidade de vendas que superou a meta de venda de 3000 reais
 
 
 # 2. Total das vendas por categoria
