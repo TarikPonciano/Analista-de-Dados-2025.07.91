@@ -82,8 +82,35 @@ for contador, regiao in enumerate(lista_regioes):
 print(f"Quantidade de Regiões: {len(lista_regioes)}")
 
 #Exibir a quantidade de vendas que superou a meta de venda de 3000 reais
+meta_atingida_qtd = 0
+meta_atingida_vendas = []
 
+for venda in lista_vendas:
+    total_venda = venda["quantidade"] * venda["valor_unitario"]
+    if total_venda >= 3000:
+        meta_atingida_qtd += 1
+        meta_atingida_vendas.append(venda)
+        
+meta_atingida_total_venda = 0
+for venda in meta_atingida_vendas:
+    print(venda)
+    meta_atingida_total_venda += venda["quantidade"] * venda["valor_unitario"]
+
+print(f"Vendas acima da meta: {meta_atingida_qtd}")
+print(f"Total obtido com vendas acima da meta: R$ {meta_atingida_total_venda:.2f}")
 
 # 2. Total das vendas por categoria
+vendas_por_categoria = {
+}
+for venda in lista_vendas:
+    if venda["categoria"] not in vendas_por_categoria:
+        vendas_por_categoria[venda["categoria"]] = 0
+
+    vendas_por_categoria[venda["categoria"]] += venda["quantidade"] * venda["valor_unitario"]
+
+print("Total por Categoria:")
+for categoria in vendas_por_categoria:
+    print(f"{categoria} - R$ {vendas_por_categoria[categoria]:.2f}")
+
 # 3. Total das vendas por vendedor
 # 4. Total das vendas por região
