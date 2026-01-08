@@ -113,4 +113,18 @@ for categoria in vendas_por_categoria:
     print(f"{categoria} - R$ {vendas_por_categoria[categoria]:.2f}")
 
 # 3. Total das vendas por vendedor
+
+vendas_por_vendedor = {
+}
+for venda in lista_vendas:
+    if venda["vendedor"] not in vendas_por_vendedor:
+        vendas_por_vendedor[venda["vendedor"]] = 0
+
+    vendas_por_vendedor[venda["vendedor"]] += venda["quantidade"] * venda["valor_unitario"]
+
+print("Total por Vendedor:")
+for vendedor in vendas_por_vendedor:
+    print(f"{vendedor} - R$ {vendas_por_vendedor[vendedor]:.2f}")
+
+
 # 4. Total das vendas por região
