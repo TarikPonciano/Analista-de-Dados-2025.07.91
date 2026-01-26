@@ -25,12 +25,18 @@ try:
     cursor = con.cursor()
 
     #Código SQL
-    cursor.execute('''
-    SELECT VERSION();
-    ''')
-    resultado = cursor.fetchall()
-    print(resultado[0][0])
 
+    #Criar a tabela de Membros (SQL)
+    cursor.execute('''
+    CREATE TABLE "Membro"(
+    membro_id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    membro_nome varchar(255) NOT NULL,
+    membro_email varchar(255) NOT NULL,
+    CONSTRAINT chk_email_valido CHECK(membro_email LIKE '%@%')
+);
+    ''')
+    con.commit()
+    print("Tabela Membro Criada com Sucesso!")
     
 except Exception as error:
     print(f"HOUVER UM ERRO AO OPERAR O BANCO DE DADOS! ERRO: {error} ")
