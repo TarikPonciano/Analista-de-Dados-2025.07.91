@@ -11,25 +11,36 @@ DB_PORT = os.getenv("DB_PORT")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
-#Estabelece a conexão com o banco
-con = psycopg2.connect(
-    dbname = DB_NAME,
-    host = DB_HOST,
-    port = DB_PORT,
-    user = DB_USER,
-    password = DB_PASSWORD
-)
-#Cria a ferramenta de interação com o banco
-cursor = con.cursor()
 
-#Código SQL
-cursor.execute('''
-SELECT VERSION();
-''')
-resultado = cursor.fetchall()
-print(resultado[0][0])
+try:
+    #Estabelece a conexão com o banco
+    con = psycopg2.connect(
+        dbname = DB_NAME,
+        host = DB_HOST,
+        port = DB_PORT,
+        user = DB_USER,
+        password = DB_PASSWORD
+    )
+    #Cria a ferramenta de interação com o banco
+    cursor = con.cursor()
 
-#IMPORTANTE FECHAR AS CONEXÕES AO FINALIZAR A CONSULTA
-cursor.close()
-con.close()
+    #Código SQL
+    cursor.execute('''
+    SELECT VERSION();
+    ''')
+    resultado = cursor.fetchall()
+    print(resultado[0][0])
+
+    
+except Exception as error:
+    print(f"HOUVER UM ERRO AO OPERAR O BANCO DE DADOS! ERRO: {error} ")
+finally:
+    #IMPORTANTE FECHAR AS CONEXÕES AO FINALIZAR A CONSULTA
+    cursor.close()
+    con.close()
+
+
+
+
+
 
