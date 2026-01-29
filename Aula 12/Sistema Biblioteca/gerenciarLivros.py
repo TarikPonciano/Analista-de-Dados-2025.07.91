@@ -37,6 +37,16 @@ while True:
 
     elif op == "2":
         print("CADASTRAR LIVRO")
+
+        titulo = input("Digite o nome do livro: ")
+        ano = int(input("Digite o ano do livro: "))
+        autor = int(input("Digite o id do autor: "))
+
+        meuBanco.manipular('''
+INSERT INTO "Livro" VALUES (default, %s, %s, %s);
+''', [titulo, ano, autor])
+        print("Livro Cadastrado Com Sucesso")
+        
     else:
         print("Digite novamente! Opção INVÁLIDA!")
 
