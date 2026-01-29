@@ -251,6 +251,17 @@ INSERT INTO "Emprestimo" (id_livro, id_membro, emp_data, emp_devolucao) VALUES
     print("ID | NOME | EMAIL")
     for membro in membros:
         print(f"{membro[0]} | {membro[1]} | {membro[2]}")
+
+    cursor.execute('''
+    SELECT livro_id, livro_titulo, livro_ano, autor_nome FROM "Livro"
+    INNER JOIN "Autor" ON autor_id = id_autor
+    ORDER BY livro_id ASC;
+''')
+    livros = cursor.fetchall()
+    print("---------- Tabela de Livros ----------")
+    print("ID | TITULO | ANO | AUTOR")
+    for livro in livros:
+        print(f"{livro[0]} | {livro[1]} | {livro[2]} | {livro[3]}")
     
 except Exception as error:
     print(f"HOUVER UM ERRO AO OPERAR O BANCO DE DADOS! ERRO: {error} ")
