@@ -205,6 +205,52 @@ INSERT INTO "Emprestimo" (id_livro, id_membro, emp_data, emp_devolucao) VALUES
 ''')
     con.commit()
 
+    # Bloco de Manipulações
+
+    cursor.execute('''
+    UPDATE "Membro"
+    SET
+        membro_nome = 'Mario Joaquim'
+    WHERE
+        membro_id = 8;
+''')
+    
+    cursor.execute('''
+    DELETE FROM "Emprestimo"
+    WHERE id_livro = 4;
+''')
+    cursor.execute('''
+    DELETE FROM "Livro"
+    WHERE livro_id = 4;
+''')
+    
+    cursor.execute('''
+    DELETE FROM "Emprestimo"
+    WHERE emp_id = (
+    SELECT emp_id FROM "Emprestimo"
+    WHERE emp_devolucao IS NULL
+    LIMIT 1
+    );
+''')
+    cursor.execute('''
+    UPDATE "Emprestimo"
+    SET
+        emp_devolucao = CURRENT_DATE
+    WHERE 
+        emp_id = 15;
+''')
+    con.commit()
+    print("Manipulações de Tabela Executadas com Sucesso")
+
+    cursor.execute('''
+    SELECT * FROM "Membro"
+    ORDER BY membro_id ASC;
+''')
+    membros = cursor.fetchall()
+    print("---------- Tabela de Membros ----------")
+    print("ID | NOME | EMAIL")
+    for membro in membros:
+        print(f"{membro[0]} | {membro[1]} | {membro[2]}")
     
 except Exception as error:
     print(f"HOUVER UM ERRO AO OPERAR O BANCO DE DADOS! ERRO: {error} ")
