@@ -97,11 +97,71 @@ tabela_vendas = pd.DataFrame(dados)
 # print(f"Desvio Padrão Preço: {tabela_vendas["preço"].std()}")
 # print(f"Mediana Preço: {tabela_vendas["preço"].median()}")
 
-tabela_vendas["Total da Venda"] = tabela_vendas["preço"] * tabela_vendas["quantidade"]
+tabela_vendas["Total da Venda Bruto"] = tabela_vendas["preço"] * tabela_vendas["quantidade"]
+
+tabela_vendas["Valor de Desconto"] = tabela_vendas["Total da Venda Bruto"] * 0.1
+
+tabela_vendas["Total da Venda"] = tabela_vendas["Total da Venda Bruto"] - tabela_vendas["Valor de Desconto"]
+
+
+# print(tabela_vendas)
+
+# Total do faturamento
+print(f"Faturamento Total: R$ {tabela_vendas["Total da Venda"].sum():.2f}")
+# Maior Venda
+print(f"Maior Venda: R$ {tabela_vendas["Total da Venda"].max():.2f}")
+# Menor Venda
+print(f"Menor Venda: R$ {tabela_vendas["Total da Venda"].min():.2f}")
+# Média das vendas
+print(f"Média de Faturamento: R$ {tabela_vendas["Total da Venda"].mean():.2f}")
+
+
+tabela_vendas = tabela_vendas.rename(columns={"preço": "Preço R$", "quantidade": "Quantidade", "id": "ID", "produto": "Produto"})
+
+tabela_vendas["Preço R$"] = tabela_vendas["Preço R$"].astype("float64")
+
+# print(tabela_vendas[["Preço R$", "Quantidade"]])
+
+# # Acessa os dados de uma linha específica
+# print(tabela_vendas.iloc[0])
+
+# # Acessa os dados de um intervalo de linhas
+# print(tabela_vendas.iloc[2:5])
+
+# # Acessa a última linha
+
+# print(tabela_vendas.iloc[-1])
+
+
+# Seleção de Linhas por condicionais
+
+# print(tabela_vendas[tabela_vendas["Total da Venda"] > 1000])
+
+# Exiba uma tabela resultante das vendas que tiveram 2 ou mais unidades vendidas.
+print(tabela_vendas[tabela_vendas["Quantidade"] >= 2])
+
+# Exiba o faturamento total das vendas de Notebook
+tabela_notebooks = tabela_vendas[ tabela_vendas["Produto"] == "Notebook"]
+print(tabela_notebooks)
+
+faturamento_notebooks = tabela_notebooks["Total da Venda"].sum()
+print(f"Faturamento das vendas de Notebook: {faturamento_notebooks}")
+
+# Exiba a média das vendas de Mouse que ultrapassaram 2 unidades
+
+tabela_mouse_2unidades = tabela_vendas[(tabela_vendas["Produto"] == "Mouse") & (tabela_vendas["Quantidade"] >= 2)]
+
+print(tabela_mouse_2unidades)
+
+media_vendas_mouse_2unidades = tabela_mouse_2unidades["Total da Venda"].mean()
+
+print(media_vendas_mouse_2unidades)
+
+
+faturamento_total = tabela_vendas["Total da Venda"].sum()
+
+tabela_vendas["Participação do Faturamento"] = (tabela_vendas["Total da Venda"] / faturamento_total)*100
 
 print(tabela_vendas)
 
-# Total do faturamento
-# Maior Venda
-# Menor Venda
-# Média das minhas vendas
+tabela_vendas.to_excel('teste.xlsx', index=False)
