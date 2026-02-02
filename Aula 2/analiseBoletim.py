@@ -70,3 +70,5 @@ print(dados_ordenado[["nome", "media"]].head(5))
 
 print("BOTTOM 5 Alunos")
 print(dados_ordenado[["nome","media"]].tail(5))
+
+dados.to_excel("boletins_enriquecido.xlsx", index=False)
