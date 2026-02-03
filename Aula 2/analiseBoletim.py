@@ -91,4 +91,22 @@ print(dados_ordenado[["nome", "media"]].head(5))
 print("BOTTOM 5 Alunos")
 print(dados_ordenado[["nome","media"]].tail(5))
 
-dados.to_excel("boletins_enriquecido.xlsx", index=False)
+print(dados["turma"].value_counts())
+print(dados["situacao"].value_counts())
+print(dados["situacao"].value_counts(normalize=True))
+print(dados[["turma", "situacao"]].value_counts())
+
+agrupamento_turma = dados.groupby("turma")
+
+agregados_turma = agrupamento_turma.agg(
+    media_b1=("nota_b1", "mean"),
+    media_b2=("nota_b2", "mean"),
+    media_b3=("nota_b3", "mean"),
+    media_b4=("nota_b4", "mean"),
+    media_geral=("media", "mean"),
+    maior_media=("media", "max"),
+    menor_media=("media", "min")
+) 
+print(agregados_turma)
+
+# dados.to_excel("boletins_enriquecido.xlsx", index=False)
