@@ -180,3 +180,6 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 Aula 1/~$teste.xlsx
+Aula 3/vendas.csv
+Aula 3/GeradorVendas.py
+Aula 3/dados_vendas.xlsx

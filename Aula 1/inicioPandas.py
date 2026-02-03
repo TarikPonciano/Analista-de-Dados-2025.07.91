@@ -103,7 +103,7 @@ tabela_vendas["Porcentagem de Desconto"] = 0
 
 tabela_vendas.loc[tabela_vendas["Total da Venda Bruto"] >= 300, "Porcentagem de Desconto"] = 10
 
-tabela_vendas["Total de Desconto"] = tabela_vendas["Total da Venda Bruto"] * tabela_vendas["Porcentagem de Desconto"] / 100
+# tabela_vendas["Total de Desconto"] = tabela_vendas["Total da Venda Bruto"] * tabela_vendas["Porcentagem de Desconto"] / 100
 
 print(tabela_vendas)
 tabela_vendas["Total da Venda"] = tabela_vendas["Total da Venda Bruto"] - tabela_vendas["Valor de Desconto"]
