@@ -9,6 +9,7 @@ print(dados)
 # Produzir coluna média dos alunos
 
 # Maneira manual
+
 # dados.loc[dados["nota_b1"].isnull(), "nota_b1"] = 0
 # dados.loc[dados["nota_b2"].isnull(), "nota_b2"] = 0
 # dados.loc[dados["nota_b3"].isnull(), "nota_b3"] = 0
@@ -16,6 +17,8 @@ print(dados)
 
 # Maneira funcional
 dados[["nota_b1", "nota_b2", "nota_b3", "nota_b4"]] = dados[["nota_b1", "nota_b2", "nota_b3", "nota_b4"]].fillna(0)
+
+
 
 # Maneira manual
 dados["media"] = (dados["nota_b1"] + dados["nota_b2"] + dados["nota_b3"] + dados["nota_b4"])/4
@@ -31,11 +34,28 @@ dados["identificador"] = dados["nome"] + " - " + dados["turma"]
 # Recuperação -> 4 a 7
 # Reprovado -> 0 a 4
 
-dados["situacao"] = "Reprovado"
+# Atribuição condicional com apply
 
-dados.loc[(dados["media"] >= 4) & (dados["media"] < 7), "situacao"] = "Recuperação"
+def classificar_media(nota):
+    if nota >= 7 and nota <= 10:
+        return "Aprovado"
+    elif nota >= 4 and nota < 7:
+        return "Recuperação"
+    elif nota >= 0 and nota < 4:
+        return "Reprovado"
+    else:
+        return "MÉDIA INVÁLIDA"
+    
 
-dados.loc[(dados["media"] >= 7) & (dados["media"] <= 10), "situacao"] = "Aprovado"
+dados["situacao"] = dados["media"].apply(classificar_media)
+
+# Método usando loc
+
+# dados["situacao"] = "Reprovado"
+
+# dados.loc[(dados["media"] >= 4) & (dados["media"] < 7), "situacao"] = "Recuperação"
+
+# dados.loc[(dados["media"] >= 7) & (dados["media"] <= 10), "situacao"] = "Aprovado"
 
 # Exibir 3 seções distintas. Tabela para aprovados, tabela para reprovados e tabela para recuperação
 
