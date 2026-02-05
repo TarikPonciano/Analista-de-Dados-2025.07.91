@@ -51,6 +51,7 @@ def classificar_idade(idade):
 
 dados["Faixa Etaria"] = dados["idade"].apply(classificar_idade)
 
+
 total_vendas_bruto = dados["Valor da Venda"].sum()
 total_vendas_liquido = dados["Valor Liquido"].sum()
 total_imposto = dados["Imposto"].sum()
@@ -103,3 +104,22 @@ print(agrupamento_vendedor.sort_values("numero_vendas", ascending=False))
 print(agrupamento_faixa_etaria.sort_values("numero_vendas", ascending=False))
 
 print(agrupamento_nivel_venda.sort_values("numero_vendas", ascending=False))
+
+with pd.ExcelWriter("dados_vendas.xlsx", engine="openpyxl") as writer:
+    dados.to_excel(excel_writer=writer, sheet_name="Dados", index=False)
+
+    medidas = {
+        "colunas": ["Faturamento Bruto", "Faturamento Líquido", "Pago em Impostos", "Número de Vendas", "Ticket Médio Líquido", "Venda Média"],
+
+        "medidas": [total_vendas_bruto, total_vendas_liquido, total_imposto, num_vendas, ticket_medio_liquido, media_venda_bruto]
+    }
+    resumo = pd.DataFrame(medidas)
+
+    resumo.to_excel(excel_writer=writer, sheet_name="Resumo")
+
+    agrupamento_vendedor.to_excel(excel_writer=writer, sheet_name="Análise Vendedores")
+    agrupamento_nivel_venda.to_excel(excel_writer=writer, sheet_name="Análise Nível de Venda")
+    agrupamento_faixa_etaria.to_excel(excel_writer=writer, sheet_name="Análise Etária")
+
+    print("Exportação para o Excel concluída com sucesso!")
+
