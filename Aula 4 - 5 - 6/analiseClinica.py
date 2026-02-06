@@ -51,6 +51,26 @@ dict_genero = {
 
 dados["Sexo"] = dados["Sexo"].astype("str").str.strip().str.lower().replace(dict_genero).fillna("Não Informado").str.upper()
 
-print(dados["Sexo"].value_counts())
+
+# Missão 5 - Padronizar Data
+
+# Forma padrão, porém não suficiente para todas as datas
+# dados["Data_Consulta"] = pd.to_datetime(dados["Data_Consulta"], errors="coerce", dayfirst=True)
+
+def converter_data(data):
+
+    try:
+        return pd.to_datetime(data, format="%d/%m/%Y")
+    except:
+        try:
+            return pd.to_datetime(data, format="%Y-%m-%d")
+        except:
+            return pd.NaT
 
 
+
+dados["Data_Consulta"] = dados["Data_Consulta"].str.strip().apply(converter_data)
+
+dados["Dia da Semana"] = dados["Data_Consulta"].dt.day_name()
+
+print(dados.sample(20).to_string())
