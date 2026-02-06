@@ -40,6 +40,17 @@ dados["Idade"] = dados["Idade"].clip(lower=0, upper=120)
 # print(dados[(dados["Idade"] < 0) | (dados["Idade"] > 120)])
 
 
-# print(mediana_idade)
+# Missão 4 - Padronizar Gênero
+dict_genero = {
+    "feminino": "f",
+    "masculino": "m",
+    "": "Não Informado",
+    " ":"Não Informado",
+    "N/A":"Não Informado"
+}
+
+dados["Sexo"] = dados["Sexo"].astype("str").str.strip().str.lower().replace(dict_genero).fillna("Não Informado").str.upper()
+
 print(dados["Sexo"].value_counts())
+
 
