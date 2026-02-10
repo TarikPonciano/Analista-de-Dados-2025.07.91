@@ -57,23 +57,23 @@ dados["Sexo"] = dados["Sexo"].astype("str").str.strip().str.lower().replace(dict
 # Forma padrão, porém não suficiente para todas as datas
 # dados["Data_Consulta"] = pd.to_datetime(dados["Data_Consulta"], errors="coerce", dayfirst=True)
 
-# def converter_data(data):
+def converter_data(data):
 
-#     try:
-#         return pd.to_datetime(data, format="%d/%m/%Y")
-#     except:
-#         try:
-#             return pd.to_datetime(data, format="%Y-%m-%d")
-#         except:
-#             return pd.NaT
+    try:
+        return pd.to_datetime(data, format="%d/%m/%Y")
+    except:
+        try:
+            return pd.to_datetime(data, format="%Y-%m-%d")
+        except:
+            return pd.NaT
 
 
 
-# dados["Data_Consulta"] = dados["Data_Consulta"].str.strip().apply(converter_data)
+dados["Data_Consulta"] = dados["Data_Consulta"].str.strip().apply(converter_data)
 
-# dados["Dia da Semana"] = dados["Data_Consulta"].dt.day_name()
+dados["Dia da Semana"] = dados["Data_Consulta"].dt.day_name()
 
-# print(dados.sample(20).to_string())
+
 
 
 # Missão 6 - Padronizar Especialidades
@@ -109,3 +109,5 @@ print(dados["Retorno"].value_counts())
 dados = dados.drop_duplicates(subset=["Nome", "Data_Consulta", "Especialidade"]).reset_index(drop=True)
 
 print(dados.info())
+
+print(dados.sample(20).to_string())
