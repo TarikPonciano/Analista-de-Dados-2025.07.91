@@ -18,6 +18,7 @@ df = pd.DataFrame(
 plt.figure(figsize=(8,5))
 
 plt.plot(df["mes"], df["lojaA"], color="red", marker="o", linewidth=2, linestyle='-', label="Loja A")
+
 plt.plot(df["mes"], df["lojaB"], color="blue", marker="x", linewidth=2, linestyle='--', label="Loja B")
 
 plt.title("Análise Mês x Faturamento")
