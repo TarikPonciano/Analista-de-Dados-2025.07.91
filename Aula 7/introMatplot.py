@@ -15,7 +15,9 @@ df = pd.DataFrame(
 )
 
 plt.figure(figsize=(8,5))
+
 plt.plot(df["mes"], df["valor"], color="red", marker="o", linewidth=2, linestyle='-')
+
 # bar, barh, pie, scatter, plot
 # Crie um gráfico de linha (plot) com marcadores e em que a linha é vermelha
 plt.title("Análise Mês x Faturamento")

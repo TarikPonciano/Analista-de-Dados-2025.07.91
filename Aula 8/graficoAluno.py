@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 df = pd.DataFrame(
     {
         "bimestres": ["Bimestre 1", "Bimestre 2", "Bimestre 3", "Bimestre 4"],
-        "notas": [8, 9.5, 6, 7]
+        "notas": [10,9,9,8.5]
     }
 )
 
@@ -16,6 +16,8 @@ plt.title("Notas X Bimestres")
 plt.xlabel("Bimestre")
 plt.ylabel("Nota")
 plt.ylim(0,10)
+plt.yticks([0,1,2,3,4,5,6,7,8,9,10])
+# plt.yticks([i * 1 for i in range(11)])
 plt.grid(True)
 
 for i in range(len(df["bimestres"])):
