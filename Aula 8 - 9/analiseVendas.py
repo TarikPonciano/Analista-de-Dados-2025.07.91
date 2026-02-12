@@ -15,10 +15,10 @@ df = pd.read_excel("dados_vendas_brutos_corrigidos.xlsx", engine="openpyxl")
 # Visualização dos Dados
 
 # %%
-# display(df.sample(10))
-# display(df.info())
-# display(df.dtypes)
-# display(df.isnull().sum())
+display(df.sample(10))
+display(df.info())
+display(df.dtypes)
+display(df.isnull().sum())
 
 # %% [markdown]
 # Limpeza e Análise das Datas
@@ -68,6 +68,8 @@ plt.title("Loja X Faturamento")
 
 plt.xlabel("Lojas")
 plt.ylabel("Faturamento")
+
+plt.ticklabel_format(style="plain", axis="y")
 
 plt.grid(True, axis="y", alpha=0.3)
 
