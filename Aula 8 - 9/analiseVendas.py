@@ -35,6 +35,7 @@ df["mes_ano"] = df["data"].dt.to_period("M")
 
 # %%
 df["valor_venda"] = df["quantidade"] * df["preco_unitario"]
+df["valor_venda"] = df["valor_venda"].round(2)
 
 # %% [markdown]
 # Gráfico Produto Venda
@@ -81,9 +82,38 @@ for bar in barras:
         f"R$ {bar.get_height():,.2f}",
         ha="center",
         va="bottom"
+)
 
-    )
 
+plt.show()
+
+# %% [markdown]
+# Gráfico de Pizza Dia da Semana x Faturamento
+
+# %%
+dia_faturamento = df.groupby("nome_dia").agg(
+    total_venda=("valor_venda", "sum")
+).reset_index()
+
+dias_ordenado = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"]
+
+dia_faturamento["nome_dia"] = pd.Categorical(
+    dia_faturamento["nome_dia"],
+    categories=dias_ordenado,
+    ordered=True
+)
+
+explode = [0.10] * len(dia_faturamento["nome_dia"])
+
+dia_faturamento = dia_faturamento.sort_values("nome_dia", ascending=False)
+
+plt.pie(dia_faturamento["total_venda"], labels=dia_faturamento["nome_dia"], autopct="%1.1f%%", startangle=90, explode=explode)
+
+# plt.legend(
+#     dia_faturamento["nome_dia"],
+#     title="Dia da Semana",
+#     loc="best"
+# )
 
 plt.show()
 
