@@ -47,5 +47,12 @@ else:
 
 # Exibir na tela do nosso streamlit o Faturamento Total Geral
 
+faturamento_geral = df["vendas"].sum()
+
+faturamento_filtrado = dfLojas["vendas"].sum()
+
+st.metric(f"Percentual de Participação da {loja}", f"{((faturamento_filtrado/faturamento_geral)*100):.1f}%")
+
+st.metric("Faturamento Geral", f"R$ {faturamento_geral:,.2f}")
 
 
