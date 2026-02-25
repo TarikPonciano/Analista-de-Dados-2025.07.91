@@ -33,8 +33,37 @@ faturamento_bruto_total = df["total_venda"].round(2).sum()
 
 st.metric("Faturamento Bruto", f"R$ {faturamento_bruto_total:,.2f} reais")
 
+lucro_total = df["lucro_venda"].sum()
 
+st.metric("Lucro Total", f"R$ {lucro_total:,.2f} reais")
+
+margem_lucro = (lucro_total/faturamento_bruto_total)*100
+
+st.metric("Margem de Lucro", f"{margem_lucro:.2f}%")
 
 st.dataframe(df)
 
+faturamento_por_regiao_df = df.groupby("regiao").agg(
+    faturamento_total = ("total_venda", "sum")
+).reset_index()
 
+fig, axes = plt.subplots(2, 1)
+
+axes[0].bar(faturamento_por_regiao_df["regiao"], faturamento_por_regiao_df["faturamento_total"])
+axes[0].set_title("Faturamento por Tempo")
+axes[0].set_xlabel("Datas")
+axes[0].set_ylabel("Totais de Venda")
+axes[0].grid(True, axis="y")
+
+axes[1].bar(faturamento_por_regiao_df["regiao"], faturamento_por_regiao_df["faturamento_total"])
+axes[1].set_title("Faturamento por Tempo")
+axes[1].set_xlabel("Datas")
+axes[1].set_ylabel("Totais de Venda")
+axes[1].grid(True)
+
+
+fig.tight_layout()
+
+st.pyplot(fig)
+
+st.bar_chart(faturamento_por_regiao_df, x="regiao", y="faturamento_total")
