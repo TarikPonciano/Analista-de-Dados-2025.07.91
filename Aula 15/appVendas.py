@@ -12,15 +12,34 @@ df = pd.read_csv("vendas_5000_linhas_tratado.csv")
 
 st.set_page_config(page_title="Dashboard Vendas", page_icon="📊")
 
-st.title("Dashboard Vendas XYZ")
-st.header("2026")
+# Construindo o menu lateral
+
+st.sidebar.header("Filtros")
 
 categorias = ["Todos"] + df["categoria"].unique().tolist()
 
-filtro_categoria = st.selectbox("Escolha uma categoria:", categorias)
+filtro_categoria = st.sidebar.selectbox("Escolha uma categoria:", categorias)
+
+filtro_regiao = st.sidebar.selectbox("Escolha uma região", options=["Todos"] + df["regiao"].unique().tolist())
+
+formas_de_pagamento = df["forma_pagamento"].unique()
+
+filtro_pagamento = st.sidebar.multiselect("Escolha uma forma de pagamento", options=df["forma_pagamento"].unique(), default=df["forma_pagamento"].unique())
+
+# Utilize os elementos selecionados para filtrar o dataframe
+
+
+st.title("Dashboard Vendas XYZ")
+st.header("2026")
+
 
 if filtro_categoria != "Todos":
     df = df[df["categoria"] == filtro_categoria]
+
+if filtro_regiao != "Todos":
+    df = df[df["regiao"] == filtro_regiao]
+
+
 
 faturamento_bruto_total = df["total_venda"].round(2).sum()
 
@@ -60,7 +79,6 @@ axes[1].set_title("Faturamento por Tempo")
 axes[1].set_xlabel("Datas")
 axes[1].set_ylabel("Totais de Venda")
 axes[1].grid(True)
-
 
 fig.tight_layout()
 
