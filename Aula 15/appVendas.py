@@ -56,7 +56,7 @@ lucro_total = df["lucro_venda"].sum()
 
 margem_lucro = (lucro_total/faturamento_bruto_total)*100
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([3,3,1])
 
 with col1:
     st.metric("Faturamento Bruto", f"R$ {faturamento_bruto_total:,.2f} reais")
@@ -64,29 +64,28 @@ with col1:
 with col2:
     st.metric("Lucro Total", f"R$ {lucro_total:,.2f} reais")
 
-st.dataframe(df)
+with col3:
+    st.metric("Margem de Lucro", f" {margem_lucro:.2f}%")
+
 
 faturamento_por_regiao_df = df.groupby("regiao").agg(
     faturamento_total = ("total_venda", "sum")
 ).reset_index()
 
-fig, axes = plt.subplots(2, 1)
+aba1, aba2, aba3, aba4 = st.tabs(["Dados 🎲", "Região 🗺️", "Categoria de Produto 🎧", "Cliente 🧑"])
 
-axes[0].bar(faturamento_por_regiao_df["regiao"], faturamento_por_regiao_df["faturamento_total"])
-axes[0].set_title("Faturamento por Tempo")
-axes[0].set_xlabel("Datas")
-axes[0].set_ylabel("Totais de Venda")
-axes[0].grid(True, axis="y")
 
-axes[1].bar(faturamento_por_regiao_df["regiao"], faturamento_por_regiao_df["faturamento_total"])
-axes[1].set_title("Faturamento por Tempo")
-axes[1].set_xlabel("Datas")
-axes[1].set_ylabel("Totais de Venda")
-axes[1].grid(True)
+# Preencha cada aba abaixo com visualizações relevantes para a categoria da aba. Cada aba deve conter 1 gráfico/tabela específico daquela situação e 2 cards de métricas. Os cards de métrica devem ser organizados usando colunas
 
-fig.tight_layout()
+with aba1:
+    st.dataframe(df)
 
-st.pyplot(fig)
+with aba2:
+    st.subheader("EM CONSTRUÇÃO")
 
-st.bar_chart(faturamento_por_regiao_df, x="regiao", y="faturamento_total")
+with aba3:
+    st.subheader("EM CONSTRUÇÃO")
+
+with aba4:
+    st.subheader("EM CONSTRUÇÃO")
 
