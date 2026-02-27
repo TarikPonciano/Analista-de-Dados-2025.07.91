@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("vendas_5000_linhas_tratado.csv")
 
-st.set_page_config(page_title="Dashboard Vendas", page_icon="📊")
+st.set_page_config(page_title="Dashboard Vendas", page_icon="📊", layout="wide")
 
 # Construindo o menu lateral
 
@@ -22,16 +22,9 @@ filtro_categoria = st.sidebar.selectbox("Escolha uma categoria:", categorias)
 
 filtro_regiao = st.sidebar.selectbox("Escolha uma região", options=["Todos"] + df["regiao"].unique().tolist())
 
-formas_de_pagamento = df["forma_pagamento"].unique()
-
 filtro_pagamento = st.sidebar.multiselect("Escolha uma forma de pagamento", options=df["forma_pagamento"].unique(), default=df["forma_pagamento"].unique())
 
 # Utilize os elementos selecionados para filtrar o dataframe
-
-
-st.title("Dashboard Vendas XYZ")
-st.header("2026")
-
 
 if filtro_categoria != "Todos":
     df = df[df["categoria"] == filtro_categoria]
@@ -39,9 +32,16 @@ if filtro_categoria != "Todos":
 if filtro_regiao != "Todos":
     df = df[df["regiao"] == filtro_regiao]
 
+if filtro_pagamento == []:
+    filtro_pagamento = df["forma_pagamento"].unique()
+
+df = df[df["forma_pagamento"].isin(filtro_pagamento)]
 
 
-faturamento_bruto_total = df["total_venda"].round(2).sum()
+st.title("Dashboard Vendas XYZ")
+
+st.header("2026")
+
 
 # if faturamento_bruto_total > 10000000:
 #     faturamento_bruto_total = faturamento_bruto_total/1000000
@@ -50,15 +50,19 @@ faturamento_bruto_total = df["total_venda"].round(2).sum()
 #     faturamento_bruto_total = faturamento_bruto_total/1000
 #     st.metric("Faturamento Bruto", f"R$ {faturamento_bruto_total:,.2f} milhares de reais")
 
-st.metric("Faturamento Bruto", f"R$ {faturamento_bruto_total:,.2f} reais")
+faturamento_bruto_total = df["total_venda"].round(2).sum()
 
 lucro_total = df["lucro_venda"].sum()
 
-st.metric("Lucro Total", f"R$ {lucro_total:,.2f} reais")
-
 margem_lucro = (lucro_total/faturamento_bruto_total)*100
 
-st.metric("Margem de Lucro", f"{margem_lucro:.2f}%")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Faturamento Bruto", f"R$ {faturamento_bruto_total:,.2f} reais")
+
+with col2:
+    st.metric("Lucro Total", f"R$ {lucro_total:,.2f} reais")
 
 st.dataframe(df)
 
@@ -85,3 +89,4 @@ fig.tight_layout()
 st.pyplot(fig)
 
 st.bar_chart(faturamento_por_regiao_df, x="regiao", y="faturamento_total")
+
