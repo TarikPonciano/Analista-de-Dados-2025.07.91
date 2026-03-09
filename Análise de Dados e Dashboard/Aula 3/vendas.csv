@@ -1,0 +1,201 @@
+﻿id_venda,data,cliente,idade,vendedor,loja,produto,quantidade,preco_unitario
+1,2023-11-24,Daniel Costa,19,Fernanda Lima,Curitiba,Fone de Ouvido,1,180.47
+2,2023-12-13,Raquel Teixeira,23,Lucas Mendes,Manaus,Smartphone,1,1298.33
+3,2023-04-30,Quintino Dias,56,Marcos Silva,São Paulo,Fone de Ouvido,3,595.53
+4,2023-08-03,Henrique Souza,46,Ricardo Oliveira,Manaus,Smartphone,1,3704.06
+5,2023-12-24,Nicolas Ramos,39,Roberto Santos,Curitiba,Fone de Ouvido,1,769.19
+6,2023-02-22,Carla Santos,42,Juliana Pereira,Rio de Janeiro,Teclado,1,200.93
+7,2023-08-24,Raquel Teixeira,25,Mariana Costa,Salvador,Câmera,5,1662.26
+8,2023-11-13,Leonardo Martins,54,Mariana Costa,Porto Alegre,Smartphone,1,3382.17
+9,2023-02-10,Henrique Souza,24,Ricardo Oliveira,Salvador,Impressora,1,1099.25
+10,2023-03-25,Leonardo Martins,40,Ricardo Oliveira,Porto Alegre,Notebook,1,5850.22
+11,2023-10-01,Henrique Souza,28,Lucas Mendes,Fortaleza,Monitor,5,1985.33
+12,2023-12-19,Raquel Teixeira,32,Carlos Almeida,Brasília,Fone de Ouvido,1,671.7
+13,2023-07-25,Isabela Rocha,22,Amanda Rodrigues,Porto Alegre,Teclado,2,103.16
+14,2023-07-22,Olivia Castro,27,Roberto Santos,Curitiba,Fone de Ouvido,3,616.39
+15,2023-05-15,Samuel Gomes,45,Lucas Mendes,Manaus,Teclado,1,104.83
+16,2023-09-18,Paulo Cardoso,23,Mariana Costa,São Paulo,Tablet,5,1866.66
+17,2023-08-05,Tatiane Moreira,22,Lucas Mendes,Salvador,Console de Games,3,4988.36
+18,2023-05-09,Raquel Teixeira,18,Marcos Silva,Rio de Janeiro,Monitor,1,1676.04
+19,2023-02-27,João Mendes,45,Patrícia Souza,Belo Horizonte,Smartphone,1,4347.59
+20,2023-09-14,Fernando Alves,50,Ricardo Oliveira,Rio de Janeiro,Câmera,1,2483.32
+21,2023-07-11,Fernando Alves,52,Carlos Almeida,Recife,Console de Games,1,2972.47
+22,2023-02-27,Leonardo Martins,69,Fernanda Lima,Curitiba,Smartphone,4,1994.88
+23,2023-02-10,Carla Santos,64,Mariana Costa,Fortaleza,Câmera,1,2891.17
+24,2023-12-04,Paulo Cardoso,53,Ricardo Oliveira,Belo Horizonte,Câmera,2,3168.33
+25,2023-04-19,Raquel Teixeira,66,Ricardo Oliveira,Porto Alegre,Mouse,5,199.18
+26,2023-07-11,Olivia Castro,51,Mariana Costa,Fortaleza,Fone de Ouvido,1,241.78
+27,2023-01-11,Samuel Gomes,53,Amanda Rodrigues,Porto Alegre,Fone de Ouvido,5,85.18
+28,2023-01-31,Henrique Souza,22,Juliana Pereira,São Paulo,Notebook,1,5327.86
+29,2023-12-09,Paulo Cardoso,31,Roberto Santos,Recife,Console de Games,1,3728.63
+30,2023-08-31,Nicolas Ramos,30,Mariana Costa,Rio de Janeiro,Mouse,2,90.23
+31,2023-08-28,Bruno Oliveira,61,Carlos Almeida,Rio de Janeiro,Mouse,1,153.8
+32,2023-05-08,Gabriela Lima,30,Patrícia Souza,Recife,Tablet,1,1517.2
+33,2023-08-25,Henrique Souza,22,Marcos Silva,Fortaleza,Notebook,3,2778.24
+34,2023-01-08,Carla Santos,66,Roberto Santos,Porto Alegre,Mouse,1,112.56
+35,2023-07-25,Bruno Oliveira,28,Carlos Almeida,Salvador,Mouse,2,75.08
+36,2023-05-27,Nicolas Ramos,62,Patrícia Souza,Recife,Tablet,1,1122.83
+37,2023-01-30,Samuel Gomes,65,Carlos Almeida,Recife,Teclado,4,64.29
+38,2023-09-02,Quintino Dias,51,Carlos Almeida,Belo Horizonte,Câmera,1,1108.29
+39,2023-02-05,Tatiane Moreira,22,Lucas Mendes,Porto Alegre,Notebook,4,7678.78
+40,2023-05-07,Samuel Gomes,56,Amanda Rodrigues,São Paulo,Notebook,4,4805.74
+41,2023-10-17,Quintino Dias,38,Fernanda Lima,Curitiba,Teclado,2,109.67
+42,2023-03-09,João Mendes,47,Mariana Costa,Brasília,Smartphone,4,2712.34
+43,2023-02-21,Carla Santos,52,Marcos Silva,Porto Alegre,Monitor,1,785.44
+44,2023-02-05,Henrique Souza,41,Roberto Santos,Curitiba,Impressora,1,1317.12
+45,2023-11-10,Quintino Dias,18,Ricardo Oliveira,Recife,Notebook,1,7664.12
+46,2023-05-16,Daniel Costa,24,Roberto Santos,Recife,Monitor,1,994.46
+47,2023-06-25,Gabriela Lima,61,Marcos Silva,Curitiba,Impressora,1,676.23
+48,2023-02-17,Nicolas Ramos,35,Carlos Almeida,São Paulo,Teclado,5,242.78
+49,2023-05-15,Fernando Alves,65,Marcos Silva,Fortaleza,Mouse,1,125.35
+50,2023-02-08,Elena Pereira,52,Juliana Pereira,São Paulo,Console de Games,2,3657.58
+51,2023-03-07,Bruno Oliveira,37,Carlos Almeida,Brasília,Teclado,1,102.52
+52,2023-12-08,Daniel Costa,40,Lucas Mendes,Recife,Console de Games,1,4248.43
+53,2023-03-25,Fernando Alves,44,Roberto Santos,São Paulo,Teclado,2,245.6
+54,2023-12-09,Henrique Souza,35,Mariana Costa,Belo Horizonte,Mouse,2,178.27
+55,2023-04-24,Gabriela Lima,70,Juliana Pereira,Fortaleza,Monitor,1,1748.75
+56,2023-04-25,Ana Silva,60,Lucas Mendes,Porto Alegre,Teclado,1,119.65
+57,2023-05-23,Leonardo Martins,59,Lucas Mendes,Recife,Câmera,1,1760.99
+58,2023-03-01,Isabela Rocha,29,Ricardo Oliveira,Manaus,Smartphone,2,1557.73
+59,2023-06-26,Karina Ferreira,45,Marcos Silva,Manaus,Notebook,4,4618.57
+60,2023-04-08,Isabela Rocha,20,Carlos Almeida,Salvador,Câmera,3,3306.5
+61,2023-12-18,Gabriela Lima,41,Mariana Costa,Salvador,Teclado,5,205.79
+62,2023-03-05,João Mendes,50,Lucas Mendes,Curitiba,Teclado,1,150.6
+63,2023-10-11,Elena Pereira,30,Lucas Mendes,Salvador,Tablet,1,1846.38
+64,2023-07-27,Raquel Teixeira,18,Ricardo Oliveira,Curitiba,Fone de Ouvido,4,389.52
+65,2023-11-07,Karina Ferreira,47,Patrícia Souza,Fortaleza,Fone de Ouvido,1,448.05
+66,2023-12-04,Carla Santos,36,Amanda Rodrigues,Recife,Teclado,1,73.35
+67,2023-12-11,João Mendes,32,Roberto Santos,Porto Alegre,Smartphone,2,1352.51
+68,2023-11-09,Carla Santos,47,Amanda Rodrigues,Salvador,Fone de Ouvido,2,597.21
+69,2023-09-11,Mariana Barbosa,33,Carlos Almeida,Belo Horizonte,Notebook,1,6781.31
+70,2023-04-01,Quintino Dias,47,Marcos Silva,São Paulo,Fone de Ouvido,1,740.58
+71,2023-08-22,Elena Pereira,69,Marcos Silva,Fortaleza,Câmera,2,2448.18
+72,2023-11-10,Quintino Dias,45,Patrícia Souza,Recife,Tablet,2,2064.21
+73,2023-08-19,Isabela Rocha,66,Ricardo Oliveira,Porto Alegre,Câmera,1,2159.95
+74,2023-05-21,Olivia Castro,22,Fernanda Lima,Curitiba,Monitor,3,1070.19
+75,2023-02-11,Elena Pereira,27,Lucas Mendes,Porto Alegre,Tablet,1,2000.91
+76,2023-08-01,Nicolas Ramos,39,Patrícia Souza,Recife,Mouse,2,40.59
+77,2023-07-19,Samuel Gomes,62,Amanda Rodrigues,São Paulo,Mouse,1,111.09
+78,2023-06-02,Mariana Barbosa,44,Marcos Silva,Recife,Console de Games,2,4693.43
+79,2023-04-23,Isabela Rocha,45,Carlos Almeida,Fortaleza,Mouse,5,87.14
+80,2023-07-27,Fernando Alves,47,Amanda Rodrigues,Belo Horizonte,Câmera,2,970.11
+81,2023-10-31,Samuel Gomes,60,Mariana Costa,São Paulo,Mouse,2,53.07
+82,2023-04-04,Bruno Oliveira,34,Juliana Pereira,Salvador,Fone de Ouvido,1,407.38
+83,2023-07-14,Isabela Rocha,66,Ricardo Oliveira,Salvador,Notebook,3,5086.69
+84,2023-01-27,Leonardo Martins,32,Carlos Almeida,Rio de Janeiro,Smartphone,1,4333.72
+85,2023-01-11,Tatiane Moreira,27,Roberto Santos,Porto Alegre,Impressora,4,1136.4
+86,2023-04-22,Olivia Castro,62,Juliana Pereira,Curitiba,Tablet,1,1830.02
+87,2023-03-25,João Mendes,24,Carlos Almeida,Manaus,Monitor,2,1406.12
+88,2023-07-23,Gabriela Lima,22,Fernanda Lima,Manaus,Notebook,1,6334.56
+89,2023-12-17,Tatiane Moreira,69,Amanda Rodrigues,Rio de Janeiro,Smartphone,2,2345.77
+90,2023-12-05,Leonardo Martins,22,Juliana Pereira,Recife,Smartphone,2,4003.6
+91,2023-02-24,Nicolas Ramos,41,Roberto Santos,Fortaleza,Mouse,3,59.94
+92,2023-11-30,Isabela Rocha,57,Patrícia Souza,Recife,Impressora,4,879.13
+93,2023-05-18,Karina Ferreira,33,Ricardo Oliveira,Rio de Janeiro,Impressora,2,668.25
+94,2023-10-19,Tatiane Moreira,60,Juliana Pereira,Salvador,Smartphone,1,2831.21
+95,2023-04-04,Paulo Cardoso,31,Ricardo Oliveira,Brasília,Teclado,4,119.91
+96,2023-12-26,Isabela Rocha,53,Marcos Silva,São Paulo,Fone de Ouvido,2,141.64
+97,2023-09-08,Raquel Teixeira,66,Patrícia Souza,Porto Alegre,Impressora,1,892.99
+98,2023-02-17,João Mendes,32,Fernanda Lima,Salvador,Monitor,1,1529.54
+99,2023-08-31,Raquel Teixeira,51,Lucas Mendes,Brasília,Câmera,2,1760.06
+100,2023-05-19,João Mendes,34,Mariana Costa,Porto Alegre,Fone de Ouvido,3,307.19
+101,2023-12-20,Fernando Alves,30,Patrícia Souza,Porto Alegre,Monitor,3,1614.42
+102,2023-11-02,João Mendes,24,Ricardo Oliveira,Porto Alegre,Fone de Ouvido,1,339.83
+103,2023-01-08,Raquel Teixeira,26,Carlos Almeida,Curitiba,Smartphone,1,3026.08
+104,2023-11-23,Paulo Cardoso,24,Amanda Rodrigues,São Paulo,Monitor,2,1257.16
+105,2023-06-24,Fernando Alves,21,Patrícia Souza,Curitiba,Notebook,2,7021.64
+106,2023-09-09,Carla Santos,54,Roberto Santos,São Paulo,Tablet,1,2178.94
+107,2023-02-13,Henrique Souza,25,Lucas Mendes,Recife,Console de Games,4,3788.38
+108,2023-04-26,Quintino Dias,42,Patrícia Souza,Fortaleza,Monitor,2,1804.23
+109,2023-06-06,Samuel Gomes,57,Amanda Rodrigues,São Paulo,Notebook,1,7711.75
+110,2023-11-17,Gabriela Lima,34,Roberto Santos,Rio de Janeiro,Fone de Ouvido,1,205.15
+111,2023-03-22,Ana Silva,44,Amanda Rodrigues,Fortaleza,Impressora,1,720.39
+112,2023-05-28,João Mendes,62,Mariana Costa,Fortaleza,Fone de Ouvido,5,745.22
+113,2023-10-29,Gabriela Lima,45,Marcos Silva,Rio de Janeiro,Fone de Ouvido,1,546.3
+114,2023-03-14,Carla Santos,21,Ricardo Oliveira,Belo Horizonte,Console de Games,4,4246.87
+115,2023-05-28,Olivia Castro,25,Ricardo Oliveira,Fortaleza,Mouse,3,190.25
+116,2023-10-04,Paulo Cardoso,46,Amanda Rodrigues,Rio de Janeiro,Smartphone,1,4135.1
+117,2023-11-06,Isabela Rocha,19,Fernanda Lima,Rio de Janeiro,Console de Games,1,3761.37
+118,2023-12-11,Isabela Rocha,54,Roberto Santos,São Paulo,Impressora,2,970.86
+119,2023-05-23,Fernando Alves,55,Patrícia Souza,Salvador,Notebook,2,5085.06
+120,2023-06-20,Karina Ferreira,60,Roberto Santos,Rio de Janeiro,Teclado,2,152.91
+121,2023-05-28,Mariana Barbosa,70,Carlos Almeida,Recife,Impressora,1,496.87
+122,2023-06-15,Daniel Costa,67,Marcos Silva,Salvador,Smartphone,3,3370.28
+123,2023-08-25,Nicolas Ramos,21,Marcos Silva,Porto Alegre,Teclado,2,205.66
+124,2023-11-17,Olivia Castro,66,Fernanda Lima,São Paulo,Monitor,1,1368.91
+125,2023-08-13,Paulo Cardoso,25,Amanda Rodrigues,São Paulo,Fone de Ouvido,1,591.04
+126,2023-10-10,Ana Silva,53,Mariana Costa,Salvador,Fone de Ouvido,1,794.43
+127,2023-08-25,Daniel Costa,59,Patrícia Souza,Belo Horizonte,Monitor,1,1312.42
+128,2023-08-01,Paulo Cardoso,48,Patrícia Souza,Porto Alegre,Câmera,1,1276.07
+129,2023-11-03,Quintino Dias,65,Mariana Costa,Belo Horizonte,Monitor,2,1681.75
+130,2023-06-24,Quintino Dias,35,Ricardo Oliveira,São Paulo,Monitor,4,1772.47
+131,2023-12-04,Paulo Cardoso,27,Marcos Silva,Fortaleza,Impressora,3,779.64
+132,2023-10-06,Mariana Barbosa,47,Fernanda Lima,Brasília,Fone de Ouvido,1,491.69
+133,2023-07-30,Bruno Oliveira,38,Lucas Mendes,Fortaleza,Mouse,5,198.03
+134,2023-03-19,Paulo Cardoso,20,Marcos Silva,Belo Horizonte,Console de Games,1,2995.98
+135,2023-08-14,Daniel Costa,51,Carlos Almeida,Fortaleza,Tablet,5,1496.96
+136,2023-03-21,Carla Santos,48,Juliana Pereira,Curitiba,Console de Games,5,4078.11
+137,2023-02-11,Karina Ferreira,61,Lucas Mendes,Recife,Teclado,2,206.7
+138,2023-10-05,Bruno Oliveira,57,Fernanda Lima,Rio de Janeiro,Monitor,1,1996.4
+139,2023-08-11,Daniel Costa,66,Patrícia Souza,Rio de Janeiro,Tablet,1,1979.8
+140,2023-01-24,Karina Ferreira,68,Ricardo Oliveira,São Paulo,Teclado,1,143.71
+141,2023-05-06,Quintino Dias,44,Roberto Santos,Manaus,Tablet,4,1097.62
+142,2023-07-15,Tatiane Moreira,61,Patrícia Souza,Porto Alegre,Console de Games,2,2429.35
+143,2023-11-23,Isabela Rocha,47,Carlos Almeida,Curitiba,Impressora,5,1391.33
+144,2023-10-07,Fernando Alves,22,Juliana Pereira,Fortaleza,Console de Games,2,2897.46
+145,2023-12-20,Isabela Rocha,47,Fernanda Lima,Curitiba,Mouse,1,175.07
+146,2023-05-02,Mariana Barbosa,54,Amanda Rodrigues,Brasília,Monitor,1,1989.77
+147,2023-01-12,Mariana Barbosa,35,Amanda Rodrigues,São Paulo,Smartphone,2,4205.04
+148,2023-05-27,Henrique Souza,56,Fernanda Lima,Brasília,Fone de Ouvido,5,527.04
+149,2023-12-04,Elena Pereira,58,Carlos Almeida,Rio de Janeiro,Monitor,1,1704.05
+150,2023-10-24,Leonardo Martins,64,Mariana Costa,Belo Horizonte,Monitor,2,1057.41
+151,2023-03-31,Gabriela Lima,26,Juliana Pereira,Recife,Câmera,1,2204.67
+152,2023-03-26,Isabela Rocha,70,Ricardo Oliveira,Fortaleza,Teclado,2,251.06
+153,2023-02-08,Elena Pereira,66,Lucas Mendes,Porto Alegre,Câmera,2,1851.02
+154,2023-01-08,Isabela Rocha,52,Patrícia Souza,Rio de Janeiro,Teclado,5,218.21
+155,2023-05-15,Samuel Gomes,42,Mariana Costa,Brasília,Fone de Ouvido,4,419.46
+156,2023-10-15,Karina Ferreira,57,Mariana Costa,Porto Alegre,Impressora,1,1400.33
+157,2023-11-29,Nicolas Ramos,25,Carlos Almeida,Belo Horizonte,Smartphone,2,2204.4
+158,2023-03-01,Daniel Costa,33,Roberto Santos,Recife,Mouse,5,107.12
+159,2023-12-23,Raquel Teixeira,44,Roberto Santos,Manaus,Mouse,2,141.34
+160,2023-11-12,Nicolas Ramos,35,Juliana Pereira,São Paulo,Fone de Ouvido,1,399.24
+161,2023-07-05,Daniel Costa,61,Marcos Silva,Brasília,Teclado,1,65.14
+162,2023-04-08,Daniel Costa,70,Mariana Costa,Fortaleza,Fone de Ouvido,4,542.03
+163,2023-01-11,Bruno Oliveira,68,Fernanda Lima,Brasília,Tablet,1,2137.86
+164,2023-02-05,Raquel Teixeira,31,Fernanda Lima,Manaus,Fone de Ouvido,1,316.56
+165,2023-11-02,Ana Silva,35,Roberto Santos,Belo Horizonte,Câmera,1,1551.7
+166,2023-02-26,Ana Silva,26,Juliana Pereira,São Paulo,Fone de Ouvido,1,503.97
+167,2023-03-31,Isabela Rocha,21,Lucas Mendes,Belo Horizonte,Câmera,1,1195.49
+168,2023-09-01,Olivia Castro,67,Marcos Silva,Brasília,Console de Games,3,2327.16
+169,2023-04-24,Tatiane Moreira,20,Ricardo Oliveira,Recife,Impressora,1,1107.67
+170,2023-02-01,Paulo Cardoso,43,Mariana Costa,Salvador,Impressora,2,1183.64
+171,2023-02-07,Carla Santos,38,Roberto Santos,Manaus,Notebook,4,3194.05
+172,2023-11-21,Samuel Gomes,53,Lucas Mendes,Brasília,Console de Games,2,3591.67
+173,2023-09-16,Tatiane Moreira,45,Mariana Costa,Rio de Janeiro,Câmera,1,2774.18
+174,2023-08-09,Olivia Castro,32,Juliana Pereira,Salvador,Impressora,1,838.6
+175,2023-06-10,Nicolas Ramos,38,Juliana Pereira,Curitiba,Tablet,2,1967.6
+176,2023-02-04,Carla Santos,23,Lucas Mendes,Rio de Janeiro,Notebook,1,6595.24
+177,2023-03-08,Raquel Teixeira,21,Marcos Silva,Manaus,Câmera,1,1757.08
+178,2023-07-30,Leonardo Martins,60,Carlos Almeida,Salvador,Monitor,1,1440.57
+179,2023-02-23,Samuel Gomes,50,Roberto Santos,Porto Alegre,Impressora,1,646.67
+180,2023-06-29,Raquel Teixeira,41,Ricardo Oliveira,Rio de Janeiro,Console de Games,2,2678.48
+181,2023-10-15,Tatiane Moreira,57,Carlos Almeida,Recife,Console de Games,1,4787.25
+182,2023-01-15,Fernando Alves,35,Juliana Pereira,Curitiba,Teclado,1,51.53
+183,2023-10-17,Mariana Barbosa,22,Carlos Almeida,Belo Horizonte,Notebook,1,6603.61
+184,2023-07-12,Nicolas Ramos,47,Roberto Santos,Brasília,Teclado,1,127.91
+185,2023-10-18,Tatiane Moreira,23,Roberto Santos,São Paulo,Tablet,1,2082.54
+186,2023-12-12,Carla Santos,35,Lucas Mendes,Fortaleza,Impressora,2,1067.78
+187,2023-05-20,Gabriela Lima,66,Mariana Costa,Recife,Teclado,1,157.48
+188,2023-12-14,Samuel Gomes,49,Ricardo Oliveira,Recife,Smartphone,4,1927.71
+189,2023-01-29,Ana Silva,31,Fernanda Lima,Curitiba,Tablet,1,2099.07
+190,2023-06-17,Daniel Costa,18,Lucas Mendes,Fortaleza,Tablet,3,1019.62
+191,2023-12-27,Henrique Souza,50,Juliana Pereira,Recife,Notebook,1,4683.89
+192,2023-08-12,Ana Silva,47,Juliana Pereira,Rio de Janeiro,Console de Games,2,3287.85
+193,2023-12-30,Nicolas Ramos,36,Lucas Mendes,Rio de Janeiro,Smartphone,1,4388.46
+194,2023-11-13,Olivia Castro,62,Mariana Costa,Brasília,Mouse,1,173.56
+195,2023-08-12,Samuel Gomes,43,Mariana Costa,Recife,Mouse,1,177.99
+196,2023-04-24,Karina Ferreira,67,Mariana Costa,Belo Horizonte,Câmera,3,2546.38
+197,2023-09-19,Gabriela Lima,67,Juliana Pereira,Brasília,Tablet,1,1201.66
+198,2023-05-12,Gabriela Lima,29,Roberto Santos,Manaus,Notebook,5,3474.3
+199,2023-09-10,Olivia Castro,66,Amanda Rodrigues,Manaus,Impressora,4,1149.25
+200,2023-11-26,Tatiane Moreira,38,Roberto Santos,Brasília,Impressora,2,475.11
