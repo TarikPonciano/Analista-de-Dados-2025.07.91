@@ -4,6 +4,7 @@
 # Exiba no terminal o nome e a nota do primeiro título
 import requests
 
+
 # resposta = requests.get("https://api.imdbapi.dev/titles")
 
 # primeiroFilme = resposta.json()["titles"][0]
@@ -19,6 +20,8 @@ resposta = requests.get("https://api.imdbapi.dev/titles?types=MOVIE&minVoteCount
 listaFilmes = resposta.json()["titles"]
 
 for i, filme in enumerate(listaFilmes):
+
+    idFilme = filme["id"]
     nome = filme["primaryTitle"]
     nota = filme["rating"]["aggregateRating"]
     anoLancamento = filme["startYear"]
